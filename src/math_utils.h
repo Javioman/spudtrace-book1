@@ -7,6 +7,7 @@
 #include "ray.h"
 
 class Material;
+
 struct HitRecord
 {
 	float t;

@@ -9,7 +9,6 @@ public:
 	virtual bool scatter(const ray& in, const HitRecord& rec, vector3& attenuation, ray& scattered) const = 0;
 };
 
-
 class Lambertian : public Material
 {
 public:

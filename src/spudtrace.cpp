@@ -1,5 +1,4 @@
 // spudray.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include "math.h"
 #include "objects.h"
@@ -42,7 +41,6 @@ void sample_scene(World& world)
 		new Dielectric(1.5f)));
 	world._objects.push_back(std::make_unique<Sphere>(vector3(-1.0f, 0.0f, -1.0f), -0.45f,
 		new Dielectric(1.5f)));
-
 }
 
 void book_cover_scene(World& world) {
@@ -132,7 +130,6 @@ void thread_process(const job_params& params, vector3* output)
 
 	auto finish = std::chrono::high_resolution_clock::now();
 	std::cout << "Finished image processing in  " << std::chrono::duration_cast<std::chrono::seconds>(finish - start).count() << " second(s)\n";
-
 }
 
 bool write_ppm(const char* filename, int32_t width, int32_t height, const std::vector<vector3>& data)
@@ -189,7 +186,6 @@ int main()
 	float vfov = 20.0f;
 	Camera cam(lookFrom, lookAt, vector3::UP, vfov, nx/ny, aperture, dist_to_focus );
 
-
 	// create output buffer and pre-allocate all memory so we are not doing bunch of allocations
 	std::vector<vector3> frame_buffer;
 	frame_buffer.resize(width * height);
@@ -203,6 +199,4 @@ int main()
 
 	//std::thread t(&thread_process, params);   // t starts running
 	//t.join();
-
-	
 }

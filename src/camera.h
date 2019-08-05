@@ -13,7 +13,6 @@ public:
 		_u = unit_vector(cross(vup, _w));
 		_v = cross(_w, _u);
 
-		
 		//_lower_left_corner = vector3(-half_width, -half_height, -1.0f);
 		_origin = lookfrom;
 		_lower_left_corner = _origin - half_width * _u - half_height * _v - _w;
@@ -32,7 +31,6 @@ public:
 		_u = unit_vector(cross(vup, _w));
 		_v = cross(_w, _u);
 
-
 		//_lower_left_corner = vector3(-half_width, -half_height, -1.0f);
 		_lower_left_corner = _origin - half_width * focus_dist * _u - half_height * focus_dist * _v - focus_dist * _w;
 		_horizontal = 2.0f * half_width * focus_dist * _u;
@@ -46,7 +44,6 @@ public:
 	}
 
 private:
-
 	vector3 _lower_left_corner;
 	vector3 _horizontal;
 	vector3 _vertical;
